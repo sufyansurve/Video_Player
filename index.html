@@ -17,12 +17,12 @@
   var video = document.getElementById('video');
   if(Hls.isSupported()) {
     var hls = new Hls();
-    hls.loadSource('https://vkvsd93.mycdn.me:443/hls/5270345484905.m3u8/sig/7u76eGhwAXw/expires/1694602293653/srcIp/148.113.5.1/urls/185.226.52.65/clientType/14/srcAg/CHROME_ANDROID/mid/6333501811561/5270345484905_high/index.m3u8');
+    hls.loadSource('https://dai.google.com/linear/hls/pb/event/FbL8YN7tSnqysJ6wVjKW7A/stream/097d16c9-72d7-4823-9fad-5145dbb43495:SIN2/master.m3u8');
     hls.attachMedia(video);
     video.play();
   }
   else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-    video.src = 'https://vkvsd93.mycdn.me:443/hls/5270345484905.m3u8/sig/7u76eGhwAXw/expires/1694602293653/srcIp/148.113.5.1/urls/185.226.52.65/clientType/14/srcAg/CHROME_ANDROID/mid/6333501811561/5270345484905_high/index.m3u8';
+    video.src = 'https://dai.google.com/linear/hls/pb/event/FbL8YN7tSnqysJ6wVjKW7A/stream/097d16c9-72d7-4823-9fad-5145dbb43495:SIN2/master.m3u8';
     video.addEventListener('loadedmetadata',function() {
       video.play();
     });
