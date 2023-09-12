@@ -17,12 +17,12 @@
   var video = document.getElementById('video');
   if(Hls.isSupported()) {
     var hls = new Hls();
-    hls.loadSource('https://d26g5bnklkwsh4.cloudfront.net/adf56802-7299-44ff-b183-4b2c7f595e6b/master.m3u8');
+    hls.loadSource('https://prod-ec-us-west-1.video.pscp.tv/Transcoding/v1/hls/kRDcOIk04drvfgr1WQl6PSsp4KhbENT1GJeiIh38dY3fSPWFIUMrlUXtksyIU1dEOcKEUWEwHwu_lXBcEWQLnw/non_transcode/us-west-1/periscope-replay-direct-prod-us-west-1-public/tw_master_dynamic_highlatency.m3u8');
     hls.attachMedia(video);
     video.play();
   }
   else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-    video.src = 'https://d26g5bnklkwsh4.cloudfront.net/adf56802-7299-44ff-b183-4b2c7f595e6b/master.m3u8';
+    video.src = 'https://prod-ec-us-west-1.video.pscp.tv/Transcoding/v1/hls/kRDcOIk04drvfgr1WQl6PSsp4KhbENT1GJeiIh38dY3fSPWFIUMrlUXtksyIU1dEOcKEUWEwHwu_lXBcEWQLnw/non_transcode/us-west-1/periscope-replay-direct-prod-us-west-1-public/tw_master_dynamic_highlatency.m3u8?type=live';
     video.addEventListener('loadedmetadata',function() {
       video.play();
     });
