@@ -17,12 +17,14 @@
   var video = document.getElementById('video');
   if(Hls.isSupported()) {
     var hls = new Hls();
-    hls.loadSource('https://dai.google.com/linear/hls/pb/event/FbL8YN7tSnqysJ6wVjKW7A/stream/097d16c9-72d7-4823-9fad-5145dbb43495:SIN2/master.m3u8');
+    hls.loadSource('https://hd-auth.skylinewebcams.com/live.m3u8?a=71irn0kgddejfnrmlopopnuqk4
+');
     hls.attachMedia(video);
     video.play();
   }
   else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-    video.src = 'https://dai.google.com/linear/hls/pb/event/FbL8YN7tSnqysJ6wVjKW7A/stream/097d16c9-72d7-4823-9fad-5145dbb43495:SIN2/master.m3u8';
+    video.src = 'https://hd-auth.skylinewebcams.com/live.m3u8?a=71irn0kgddejfnrmlopopnuqk4
+';
     video.addEventListener('loadedmetadata',function() {
       video.play();
     });
